@@ -208,7 +208,7 @@ const projects = [
         description: "Developed scalable NLP pipeline using fine-tuned BERT model for real-time disaster event detection with co-occurrence pattern analysis across 50,000+ disaster-related tweets and interpretable knowledge graphs.",
         technologies: ["Python", "BERT", "spaCy", "Flask", "NLP", "Knowledge Graphs"],
         image: "assets/disaster-tweets.jpg",
-        link: "https://github.com/nikhilgoud003/Co-occurence_Metrics.git
+        link: "https://github.com/nikhilgoud003/Co-occurence_Metrics.git"
     },
     {
         title: "Hand Gesture Recognition for Sign Language",
