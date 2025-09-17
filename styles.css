@@ -309,6 +309,7 @@ h1, h2 {
 }
 
 /* Experience section - FIXED ALIGNMENT */
+/* Experience section - FIXED ALIGNMENT */
 #experience {
     width: 100%;
     max-width: 1200px;
@@ -328,11 +329,10 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    /* FIXED: Ensure consistent structure and alignment */
-    width: 100%;
-    max-width: 100%;
+    /* FIXED: Ensure consistent alignment */
     margin: 0;
     position: relative;
+    overflow: hidden;
 }
 
 .experience-item:hover {
@@ -346,6 +346,8 @@ h1, h2 {
     gap: 1rem;
     margin-bottom: 1rem;
     width: 100%;
+    /* FIXED: Prevent any overflow or misalignment */
+    box-sizing: border-box;
 }
 
 .company-icon {
@@ -353,17 +355,20 @@ h1, h2 {
     height: 50px;
     object-fit: contain;
     border-radius: 50%;
+    /* FIXED: Prevent shrinking */
     flex-shrink: 0;
 }
 
 .company-details > div {
+    /* FIXED: Take remaining space properly */
     flex: 1;
-    min-width: 0; /* Prevents flex item from overflowing */
+    min-width: 0;
 }
 
 .company-details p {
     color: var(--paragraph-color);
     margin: 0.25rem 0;
+    /* FIXED: Consistent line height */
     line-height: 1.4;
 }
 
@@ -380,7 +385,43 @@ h1, h2 {
     background-clip: text;
     color: transparent;
     margin-bottom: 0.5rem;
+    /* FIXED: Prevent text wrapping issues */
     line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.achievements-list {
+    margin-top: 1rem;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    /* FIXED: Ensure proper containment */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.achievements-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    /* FIXED: Consistent text color */
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    /* FIXED: Consistent text color and styling */
+    color: var(--text-color);
+}
+
+/* ADDED: Specific fix for description paragraphs */
+.experience-item > p {
+    font-style: italic;
+    color: var(--paragraph-color);
 }
 
 /* FIXED: Consistent paragraph and list styling */
