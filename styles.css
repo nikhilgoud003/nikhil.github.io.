@@ -308,7 +308,7 @@ h1, h2 {
     margin-top: 0.25rem;
 }
 
-/* Experience section */
+/* Experience section - FIXED ALIGNMENT */
 #experience {
     width: 100%;
     max-width: 1200px;
@@ -328,6 +328,11 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    /* FIXED: Ensure consistent structure and alignment */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: relative;
 }
 
 .experience-item:hover {
@@ -337,9 +342,10 @@ h1, h2 {
 
 .company-details {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .company-icon {
@@ -347,11 +353,18 @@ h1, h2 {
     height: 50px;
     object-fit: contain;
     border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.company-details > div {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
 }
 
 .company-details p {
     color: var(--paragraph-color);
     margin: 0.25rem 0;
+    line-height: 1.4;
 }
 
 .company-details .location {
@@ -367,27 +380,33 @@ h1, h2 {
     background-clip: text;
     color: transparent;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+/* FIXED: Consistent paragraph and list styling */
+.experience-item > p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-style: italic;
 }
 
 .achievements-list {
     margin-top: 1rem;
     list-style-type: disc;
     padding-left: 1.5rem;
+    width: 100%;
 }
 
 .achievements-list li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
-}
-
-.experience-item p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 /* Projects Section */
@@ -661,6 +680,12 @@ footer .social-links a {
 
     .education-item {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .company-details {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
