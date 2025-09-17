@@ -201,21 +201,21 @@ const projects = [
         description: "Built comprehensive automated ETL pipeline processing 200,000+ eviction cases with advanced fuzzy matching algorithms for entity resolution and demographic analysis using Census API integration.",
         technologies: ["Python", "SQL", "Census API", "Fuzzy Matching", "ETL"],
         image: "assets/eviction-pipeline.jpg",
-        link: "https://github.com/nikhilyeminedi/eviction-data-pipeline"
+        link: "https://github.com/nikhilgoud003/EvictionDataHub.git"
     },
     {
         title: "Adverse-Event Detection for Disaster Tweets",
         description: "Developed scalable NLP pipeline using fine-tuned BERT model for real-time disaster event detection with co-occurrence pattern analysis across 50,000+ disaster-related tweets and interpretable knowledge graphs.",
         technologies: ["Python", "BERT", "spaCy", "Flask", "NLP", "Knowledge Graphs"],
         image: "assets/disaster-tweets.jpg",
-        link: "https://github.com/nikhilyeminedi/disaster-event-detection"
+        link: "https://github.com/nikhilgoud003/Co-occurence_Metrics.git
     },
     {
         title: "Hand Gesture Recognition for Sign Language",
         description: "Initiated end-to-end deep learning application translating sign language into text using CNN-based computer vision system for real-time hand gesture recognition with responsive Flask web interface.",
         technologies: ["Python", "TensorFlow", "OpenCV", "CNN", "Flask", "Computer Vision"],
         image: "assets/hand-gesture.jpg",
-        link: "https://github.com/nikhilyeminedi/sign-language-recognition"
+        link: "https://github.com/nikhilgoud003/SignLang-Translator.git"
     }
 ];
 
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset form
         contactForm.reset();
-        alert('Thank you for your message! Your email client should open with the pre-filled message.');
+        alert('Thank you for your message!');
     });
 
     // Smooth scrolling for navigation links
