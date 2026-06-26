@@ -2,7 +2,13 @@
 
 Modern React portfolio built with Vite, Tailwind CSS, and Framer Motion.
 
-## Quick Start
+## Live Site
+
+**https://nikhilgoud003.github.io/nikhil.github.io./**
+
+> After pushing, enable **Settings → Pages → Build and deployment → Source: GitHub Actions** on the repo.
+
+## Local Development
 
 ```bash
 npm install
@@ -14,20 +20,19 @@ Open [http://localhost:5173](http://localhost:5173)
 ## Build for Production
 
 ```bash
-npm run build
+npm run build:gh-pages   # GitHub Pages (correct base path)
 npm run preview
 ```
 
-## Deploy to GitHub Pages
+## Deploy
 
-1. Update `base` in `vite.config.ts` to your repo name (e.g. `'/nikhil.github.io./'`)
-2. Add to `package.json` scripts: `"deploy": "npm run build && gh-pages -d dist"`
-3. Run `npm run deploy`
+Pushes to `main` automatically build and deploy via GitHub Actions (`.github/workflows/deploy.yml`).
 
-## Deploy to Vercel
+Manual deploy alternative:
 
 ```bash
-npx vercel
+npm run build:gh-pages
+npx gh-pages -d dist
 ```
 
 ## Project Structure
