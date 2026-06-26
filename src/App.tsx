@@ -1,3 +1,4 @@
+import { CursorGlow } from "./components/CursorGlow";
 import { useActiveSection } from "./hooks/useTheme";
 import { navLinks } from "./data/portfolio";
 import { About } from "./components/About";
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <ScrollProgress />
+      <CursorGlow />
       <Navbar active={active} />
       <main>
         <Hero />

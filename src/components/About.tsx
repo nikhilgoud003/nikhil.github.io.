@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { about, education, personal } from "../data/portfolio";
+import { EducationCarousel } from "./EducationCarousel";
 import { Section, SectionHeading } from "./Section";
 
 export function About() {
@@ -20,36 +21,31 @@ export function About() {
               {paragraph}
             </motion.p>
           ))}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-3 gap-3 pt-4"
+          >
+            {[
+              { label: "Research", value: "2 Papers" },
+              { label: "Industry", value: "Visa · TCS" },
+              { label: "Current", value: "GSU · SCALES" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="section-card rounded-xl p-4 text-center hover:border-accent/30 transition-colors"
+              >
+                <p className="font-display font-bold text-accent">{item.value}</p>
+                <p className="text-[10px] text-muted mt-1">{item.label}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
-        <div className="md:col-span-2 space-y-4">
-          {education.map((edu, i) => (
-            <motion.div
-              key={edu.school}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="section-card rounded-xl overflow-hidden"
-            >
-              <div className="h-28 overflow-hidden">
-                <img
-                  src={edu.image}
-                  alt={edu.school}
-                  className="w-full h-full object-cover opacity-70"
-                />
-              </div>
-              <div className="p-5">
-                <p className="font-medium">{edu.degree}</p>
-                <p className="text-accent text-sm mt-1">{edu.school}</p>
-                <p className="text-muted text-sm mt-2">{edu.period}</p>
-                <p className="text-muted text-sm">{edu.location}</p>
-                <p className="text-sm mt-2 text-accent/80 font-medium">
-                  {edu.detail}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+
+        <div className="md:col-span-2">
+          <EducationCarousel items={education} />
         </div>
       </div>
     </Section>

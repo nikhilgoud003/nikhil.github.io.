@@ -17,7 +17,39 @@ export const personal = {
   github: "https://github.com/nikhilgoud003",
   scholar: "https://scholar.google.com/citations?user=nikhil-yeminedi",
   resume: "/NikhilYeminedi_Resume.pdf",
-  profileImage: "/assets/profile.png",
+  profileImage: "/assets/profile.jpg",
+};
+
+export type Education = {
+  degree: string;
+  school: string;
+  period: string;
+  location: string;
+  detail: string;
+  image: string;
+  campusImage?: string;
+  highlights?: string[];
+};
+
+export type ExperienceItem = {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  image: string;
+  summary: string;
+  context: string;
+  tags: string[];
+  bullets: string[];
+};
+
+export type Publication = {
+  status: string;
+  title: string;
+  description: string;
+  citation: string;
+  image: string;
+  venue?: string;
 };
 
 export const stats = [
@@ -33,15 +65,36 @@ My work spans RoBERTa-based entity resolution (100% F1 on legal entity matching)
 
 Before research, I spent 2.5+ years as a Data & ML Engineer at Visa (via TCS), engineering 30+ production ETL pipelines, credit-risk analytics on millions of daily transactions, and contributing to $10M+ in cost savings on the TUSKER (GFDM) project.`;
 
-export const education = [
+export const education: Education[] = [
   {
     degree: "M.S. Computer Science",
     school: "Georgia State University",
     period: "Jan 2025 – Aug 2026",
     location: "Atlanta, GA",
-    detail: "GPA: 4.0/4.0",
-    image:
-      "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
+    detail: "GPA: 4.0/4.0 — Graduate Research Assistant at SCALES & DICE Lab",
+    image: "/assets/education/gsu.jpg",
+    campusImage:
+      "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
+    highlights: [
+      "Research focus: NLP, knowledge graphs, mechanistic interpretability",
+      "Published at NLPIR 2026 (Springer); 2nd paper under review",
+      "Leadership Mentor for first-year through graduate students",
+    ],
+  },
+  {
+    degree: "B.Tech Computer Science & Engineering",
+    school: "Jawaharlal Nehru Technological University, Kakinada",
+    period: "Jul 2018 – Jun 2022",
+    location: "Kakinada, India",
+    detail: "GPA: 8.3/10 — First Class with Distinction",
+    image: "/assets/education/jntuk.png",
+    campusImage:
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+    highlights: [
+      "National Service Scheme volunteer — 3+ years of community leadership",
+      "Foundation in algorithms, distributed systems, and software engineering",
+      "Certified Programmer in Java — IIT Kharagpur",
+    ],
   },
 ];
 
@@ -158,29 +211,37 @@ export const certifications = [
   "Python & Flask – Udemy",
 ];
 
-export const experience = [
+export const experience: ExperienceItem[] = [
   {
     title: "NLP / ML Engineer",
-    company: "SCALES",
+    company: "SCALES — Georgia State University",
     location: "Atlanta, GA",
     period: "May 2025 – Present",
     image:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&q=80",
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80",
+    summary: "Legal-tech NLP & knowledge graphs at national scale",
+    context:
+      "SCALES (Systematic Content Analysis of Litigation EventS) is a GSU research center building open infrastructure for 1.28M+ U.S. Federal Court (PACER) records. I engineer the NLP pipelines that turn unstructured legal filings into queryable knowledge graphs — entity resolution, NER, and GraphRAG systems used by legal scholars and policy researchers.",
+    tags: ["RoBERTa", "Neo4j", "PACER", "GraphRAG", "AWS"],
     bullets: [
-      "Fine-tuned RoBERTa Entity Resolution (Ditto) on 1,000+ legal documents from 70+ source types — zero-labeled-data training pipeline, 100% F1, 99.9% record-linkage accuracy",
+      "Fine-tuned RoBERTa Entity Resolution (Ditto) on 1,000+ legal documents from 70+ source types — zero-labeled-data training pipeline; 100% F1, 99.9% record-linkage accuracy",
       "Built spaCy NER microservices with caching/concurrency processing 15M+ PACER records — 24% precision improvement, 98% entity-resolution accuracy",
       "Constructed multi-entity knowledge graph (1,600+ mentions → 1,190 unique entities) via Union-Find clustering; multi-key blocking reduced comparisons 95%",
-      "Production RAG legal AI assistant (Claude + BERT) with 99.9% uptime on AWS EC2",
+      "Built production RAG legal AI assistant (Claude + BERT) — 99.9% uptime on AWS EC2",
       "Power BI dashboards with 100% stakeholder adoption; led civic-tech hackathon eviction-prediction workstream",
     ],
   },
   {
     title: "AI Research Engineer",
-    company: "DICE Lab, Georgia State University",
+    company: "DICE Lab — Georgia State University",
     location: "Atlanta, GA",
     period: "Jan 2025 – Dec 2025",
     image:
-      "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=400&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+    summary: "Disaster informatics & mechanistic interpretability research",
+    context:
+      "DICE Lab (Disaster Informatics and Computational Epidemiology) at GSU uses NLP and AI to detect and analyze disaster events from social media and news. I built fine-tuning pipelines, interpretability frameworks, and full-stack apps powering the lab's published and under-review research.",
+    tags: ["BERT", "Interpretability", "NLPIR 2026", "Flask", "PyTorch"],
     bullets: [
       "Fine-tuned BERT on 163K+ posts for disaster detection — 99% accuracy (43% over baseline); published NLPIR 2026 (Springer)",
       "Mechanistic interpretability: O(1)-memory tensor masking across 12 layers / 144 attention heads — 2nd paper under review (ACL/EMNLP/NAACL 2026)",
@@ -190,27 +251,35 @@ export const experience = [
   },
   {
     title: "Data & ML Engineer",
-    company: "Visa Inc. (via TCS)",
-    location: "India",
+    company: "Visa Inc. (via Tata Consultancy Services)",
+    location: "Bengaluru, India",
     period: "Jul 2022 – Dec 2024",
     image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80",
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80",
+    summary: "Enterprise fintech pipelines & credit-risk ML at scale",
+    context:
+      "Embedded with Visa's Global Federated Data Mart (GFDM) team at TCS — maintaining distributed systems processing millions of daily financial transactions. Work spanned automated ETL/ELT, ML anomaly detection, credit risk forecasting, and the TUSKER project ($10M+ savings).",
+    tags: ["Spark", "Hadoop", "Snowflake", "Power BI", "Jenkins"],
     bullets: [
-      "ML for anomaly detection, credit risk forecasting on millions of daily transactions — 28% faster, 99.7% reliability, $10M+ savings on TUSKER",
+      "ML for anomaly detection and credit risk on millions of daily transactions — 28% faster, 99.7% reliability, $10M+ TUSKER savings",
       "30+ production ETL/ELT pipelines (Python, Spark, Hadoop, Databricks) — 42% faster integration, 60% less manual effort",
-      "DistCP/Sqoop migrations, Jenkins CI/CD + Docker — 97% deployment success; Power BI + Snowflake executive dashboards",
+      "DistCP/Sqoop migrations; Jenkins CI/CD + Docker — 97% deployment success; Power BI + Snowflake dashboards",
     ],
   },
   {
     title: "Full-Stack Developer",
     company: "Steed 26 Solutions Pvt. Ltd.",
-    location: "India",
+    location: "Hyderabad, India (Remote)",
     period: "Mar 2021 – Jun 2022",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
+    summary: "Healthcare HRMS for 1,000+ concurrent users",
+    context:
+      "Led front-end and API integration for Steed 26's Hospital Records Management System — responsive interfaces, RESTful services, and interactive clinical dashboards for healthcare data workflows.",
+    tags: ["Java", "JavaScript", "REST APIs", "D3.js", "Agile"],
     bullets: [
-      "Hospital Records Management System (HRMS) for 1,000+ concurrent users — 55% faster retrieval, 30% faster page loads",
-      "95%+ code quality via Agile Scrum, Git, QA automation; RESTful service layers for healthcare data workflows",
+      "HRMS for 1,000+ concurrent users — 55% faster retrieval, 30% faster page loads",
+      "95%+ code quality via Agile Scrum, Git, QA automation; D3.js and Chart.js dashboards",
     ],
   },
 ];
@@ -522,20 +591,28 @@ export const caseStudyStatus = [
   { done: false, text: "Full 1.28M-case scale-up and precision/recall validation" },
 ];
 
-export const publications = [
+export const publications: Publication[] = [
   {
     status: "Published",
+    title: "Interpretable Adverse Event Detection Using a Neuro-Symbolic and Graph-Based Approach",
+    description:
+      "Neuro-symbolic framework combining fine-tuned BERT with graph-based co-occurrence validation for disaster tweet classification — 99% accuracy, 43% over baseline on 163K+ posts.",
+    venue: "NLPIR 2026 · Springer",
     citation:
-      "Shrestha, A., Yeminedi, N., Kubek, M.M., & Mikler, A.R. (2026). Interpretable Adverse Event Detection Using a Neuro-Symbolic and Graph-Based Approach. NLPIR 2026, Springer.",
+      "Shrestha, A., Yeminedi, N., Kubek, M.M., & Mikler, A.R. (2026). Interpretable Adverse Event Detection Using a Neuro-Symbolic and Graph-Based Approach. Proceedings of NLPIR 2026. Springer.",
     image:
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80",
+      "https://images.unsplash.com/photo-1527482797694-1417c5b548e5?w=800&q=80",
   },
   {
     status: "Under Review",
+    title: "Towards Attention-Based Mechanistic Interpretability in Adverse Event Detection",
+    description:
+      "Opens the black box of BERT for disaster detection — single-pass O(1)-memory architecture mapping attention across 12 layers × 144 heads, with causal ablation proving lexicon tokens drive 99.5% of model confidence.",
+    venue: "Target: ACL / EMNLP / NAACL 2026",
     citation:
-      "Yeminedi, N., Shrestha, A., Kubek, M.M., & Mikler, A.R. (2026). Towards Attention-Based Mechanistic Interpretability in Adverse Event Detection. Target: ACL/EMNLP/NAACL 2026.",
+      "Yeminedi, N., Shrestha, A., Kubek, M.M., & Mikler, A.R. (2026). Towards Attention-Based Mechanistic Interpretability in Adverse Event Detection. DICE Lab, GSU.",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
   },
 ];
 

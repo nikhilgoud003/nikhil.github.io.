@@ -101,6 +101,10 @@ body.light .gradient-text {
   overflow: hidden;
 }
 
+.perspective-\[1200px\] {
+  perspective: 1200px;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;

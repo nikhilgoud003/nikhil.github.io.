@@ -124,7 +124,7 @@ export function Hero() {
             <img
               src={personal.profileImage}
               alt={personal.name}
-              className="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-2 border-accent/40 shadow-2xl shadow-accent/10"
+              className="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover object-top border-2 border-accent/40 shadow-2xl shadow-accent/10"
             />
           </motion.div>
 
