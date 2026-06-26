@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset";
+
 export const personal = {
   name: "Nikhil Yeminedi",
   roles: [
@@ -16,8 +18,8 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/nikhil-yeminedi-184576217/",
   github: "https://github.com/nikhilgoud003",
   scholar: "https://scholar.google.com/citations?user=nikhil-yeminedi",
-  resume: "/NikhilYeminedi_Resume.pdf",
-  profileImage: "/assets/profile.jpg",
+  resume: asset("NikhilYeminedi_Resume.pdf"),
+  profileImage: asset("assets/profile.jpg"),
 };
 
 export type Education = {
@@ -72,7 +74,7 @@ export const education: Education[] = [
     period: "Jan 2025 – Aug 2026",
     location: "Atlanta, GA",
     detail: "GPA: 4.0/4.0 — Graduate Research Assistant at SCALES & DICE Lab",
-    image: "/assets/education/gsu.jpg",
+    image: asset("assets/education/gsu.jpg"),
     campusImage:
       "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
     highlights: [
@@ -87,7 +89,7 @@ export const education: Education[] = [
     period: "Jul 2018 – Jun 2022",
     location: "Kakinada, India",
     detail: "GPA: 8.3/10 — First Class with Distinction",
-    image: "/assets/education/jntuk.png",
+    image: asset("assets/education/jntuk.png"),
     campusImage:
       "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
     highlights: [
@@ -600,8 +602,7 @@ export const publications: Publication[] = [
     venue: "NLPIR 2026 · Springer",
     citation:
       "Shrestha, A., Yeminedi, N., Kubek, M.M., & Mikler, A.R. (2026). Interpretable Adverse Event Detection Using a Neuro-Symbolic and Graph-Based Approach. Proceedings of NLPIR 2026. Springer.",
-    image:
-      "https://images.unsplash.com/photo-1527482797694-1417c5b548e5?w=800&q=80",
+    image: asset("assets/publications/nlpir-2026.jpg"),
   },
   {
     status: "Under Review",
@@ -611,8 +612,7 @@ export const publications: Publication[] = [
     venue: "Target: ACL / EMNLP / NAACL 2026",
     citation:
       "Yeminedi, N., Shrestha, A., Kubek, M.M., & Mikler, A.R. (2026). Towards Attention-Based Mechanistic Interpretability in Adverse Event Detection. DICE Lab, GSU.",
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+    image: asset("assets/publications/interpretability.jpg"),
   },
 ];
 
