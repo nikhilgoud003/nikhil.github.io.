@@ -75,7 +75,7 @@ export function EducationCarousel({ items }: Props) {
               <img
                 src={edu.image}
                 alt={`${edu.school} logo`}
-                className="absolute bottom-3 left-4 h-12 w-12 rounded-lg object-contain bg-white/90 p-1 shadow-lg"
+                className="absolute bottom-3 left-4 h-12 max-w-[120px] w-auto rounded-lg object-contain bg-white/95 px-2 py-1 shadow-lg"
               />
             </div>
             <div className="p-5">
@@ -90,23 +90,39 @@ export function EducationCarousel({ items }: Props) {
 
           {/* Back */}
           <div
-            className="absolute inset-0 section-card rounded-2xl p-6 flex flex-col justify-center border-accent/30"
+            className="absolute inset-0 section-card rounded-2xl overflow-hidden border-accent/30"
             style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
           >
-            <p className="text-accent text-sm font-medium">{edu.school}</p>
-            <p className="font-display font-semibold text-xl mt-1">{edu.degree}</p>
-            <p className="text-muted text-sm mt-3 leading-relaxed">{edu.detail}</p>
-            {edu.highlights && (
-              <ul className="mt-4 space-y-2">
-                {edu.highlights.map((h) => (
-                  <li key={h} className="text-xs text-muted flex gap-2">
-                    <span className="text-accent">▸</span>
-                    {h}
-                  </li>
-                ))}
-              </ul>
+            {edu.campusImage && (
+              <img
+                src={edu.campusImage}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover opacity-15"
+                aria-hidden
+              />
             )}
-            <p className="text-[10px] text-muted mt-4">Click to flip back</p>
+            <div className="absolute inset-0 bg-surface-card/90" />
+            <div className="relative p-6 flex flex-col justify-center h-full">
+              <img
+                src={edu.image}
+                alt={`${edu.school} logo`}
+                className="h-10 w-auto max-w-[140px] object-contain mb-3"
+              />
+              <p className="text-accent text-sm font-medium">{edu.school}</p>
+              <p className="font-display font-semibold text-xl mt-1">{edu.degree}</p>
+              <p className="text-muted text-sm mt-3 leading-relaxed">{edu.detail}</p>
+              {edu.highlights && (
+                <ul className="mt-4 space-y-2">
+                  {edu.highlights.map((h) => (
+                    <li key={h} className="text-xs text-muted flex gap-2">
+                      <span className="text-accent">▸</span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <p className="text-[10px] text-muted mt-4">Click to flip back</p>
+            </div>
           </div>
         </motion.button>
       </motion.div>

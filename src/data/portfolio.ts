@@ -61,11 +61,9 @@ export const stats = [
   { value: 99, suffix: "%", label: "BERT Classifier Accuracy" },
 ];
 
-export const about = `I'm an Applied NLP and ML Research Engineer at SCALES (Georgia State University), building transformer fine-tuning pipelines, knowledge graph architectures, and production RAG systems on millions of U.S. Federal Court records.
+export const about = `I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, working at the intersection of NLP, knowledge graphs, and large-scale legal data. My work spans fine-tuning transformer models for entity resolution, building mechanistic interpretability tools that look inside BERT's attention heads, and designing local, cost-free GraphRAG systems for natural-language querying over millions of federal court records.
 
-My work spans RoBERTa-based entity resolution (100% F1 on legal entity matching), spaCy NER microservices over 15M+ PACER records, mechanistic interpretability research published at NLPIR 2026, and local GraphRAG systems for natural-language querying over Neo4j — always documenting what failed and how I fixed it.
-
-Before research, I spent 2.5+ years as a Data & ML Engineer at Visa (via TCS), engineering 30+ production ETL pipelines, credit-risk analytics on millions of daily transactions, and contributing to $10M+ in cost savings on the TUSKER (GFDM) project.`;
+Before this, I spent 2.5+ years as a Data Engineer at Visa (via TCS), building ETL pipelines and credit-risk analytics at scale. I care about engineering work that's honestly evaluated — I'd rather show you a model's failure mode and how I fixed it than hide it.`;
 
 export const education: Education[] = [
   {
@@ -75,8 +73,7 @@ export const education: Education[] = [
     location: "Atlanta, GA",
     detail: "GPA: 4.0/4.0 — Graduate Research Assistant at SCALES & DICE Lab",
     image: asset("assets/education/gsu.jpg"),
-    campusImage:
-      "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
+    campusImage: asset("assets/education/gsu-campus.jpg"),
     highlights: [
       "Research focus: NLP, knowledge graphs, mechanistic interpretability",
       "Published at NLPIR 2026 (Springer); 2nd paper under review",
@@ -90,8 +87,7 @@ export const education: Education[] = [
     location: "Kakinada, India",
     detail: "GPA: 8.3/10 — First Class with Distinction",
     image: asset("assets/education/jntuk.png"),
-    campusImage:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+    campusImage: asset("assets/education/jntuk-campus.jpg"),
     highlights: [
       "National Service Scheme volunteer — 3+ years of community leadership",
       "Foundation in algorithms, distributed systems, and software engineering",
@@ -215,19 +211,18 @@ export const certifications = [
 
 export const experience: ExperienceItem[] = [
   {
-    title: "NLP / ML Engineer",
+    title: "AI/ML Research Engineer",
     company: "SCALES — Georgia State University",
     location: "Atlanta, GA",
     period: "May 2025 – Present",
-    image:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80",
-    summary: "Legal-tech NLP & knowledge graphs at national scale",
+    image: asset("assets/education/gsu-campus.jpg"),
+    summary: "Graduate Research Assistant — legal data & AI at national scale",
     context:
-      "SCALES (Systematic Content Analysis of Litigation EventS) is a GSU research center building open infrastructure for 1.28M+ U.S. Federal Court (PACER) records. I engineer the NLP pipelines that turn unstructured legal filings into queryable knowledge graphs — entity resolution, NER, and GraphRAG systems used by legal scholars and policy researchers.",
-    tags: ["RoBERTa", "Neo4j", "PACER", "GraphRAG", "AWS"],
+      "I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, working at the intersection of NLP, knowledge graphs, and large-scale legal data. My work spans fine-tuning transformer models for entity resolution, building mechanistic interpretability tools that look inside BERT's attention heads, and designing local, cost-free GraphRAG systems for natural-language querying over millions of federal court records.",
+    tags: ["Graduate RA", "Legal AI", "Federal Court Data", "NLP", "Knowledge Graphs"],
     bullets: [
-      "Fine-tuned RoBERTa Entity Resolution (Ditto) on 1,000+ legal documents from 70+ source types — zero-labeled-data training pipeline; 100% F1, 99.9% record-linkage accuracy",
-      "Built spaCy NER microservices with caching/concurrency processing 15M+ PACER records — 24% precision improvement, 98% entity-resolution accuracy",
+      "Fine-tuned RoBERTa Entity Resolution (Ditto) on 1,000+ legal documents from 70+ source types — 100% F1, 99.9% record-linkage accuracy",
+      "Built spaCy NER microservices processing 15M+ PACER records — 24% precision improvement, 98% entity-resolution accuracy",
       "Constructed multi-entity knowledge graph (1,600+ mentions → 1,190 unique entities) via Union-Find clustering; multi-key blocking reduced comparisons 95%",
       "Built production RAG legal AI assistant (Claude + BERT) — 99.9% uptime on AWS EC2",
       "Power BI dashboards with 100% stakeholder adoption; led civic-tech hackathon eviction-prediction workstream",
@@ -381,8 +376,7 @@ export const projects: Project[] = [
     ],
     tags: ["BERT", "RoBERTa", "PyTorch", "MLflow", "Spark"],
     categories: ["nlp", "research"],
-    image:
-      "https://images.unsplash.com/photo-1527482797694-1417c5b548e5?w=800&q=80",
+    image: asset("assets/projects/disaster-llm.jpg"),
     period: "Jan 2025 – Aug 2025",
     highlight: "Published NLPIR 2026",
     metrics: [
