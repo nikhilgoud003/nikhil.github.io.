@@ -3,14 +3,14 @@ import { asset } from "../utils/asset";
 export const personal = {
   name: "Nikhil Yeminedi",
   roles: [
-    "Applied NLP & ML Research Engineer",
-    "Knowledge Graph Architect",
-    "LLM Fine-Tuning Specialist",
+    "AI/ML Research Engineer",
+    "Machine Learning Engineer",
+    "Deep Learning Researcher",
   ],
   summary:
-    "Applied NLP and ML Research Engineer with 3.5+ years of production experience building LLM fine-tuning pipelines, transformer-based NLP systems, and knowledge graph architectures across fintech, legal-tech, and academic research.",
+    "AI/ML Research Engineer with 3.5+ years of production experience building and evaluating machine learning systems — fine-tuning transformers, mechanistic interpretability, and large-scale data pipelines across fintech, legal-tech, and academic research.",
   tagline:
-    "From fault-tolerant financial pipelines at Visa to published research that opens the black box of AI — BERT/RoBERTa fine-tuning, mechanistic interpretability, entity resolution, and RAG at scale.",
+    "From fault-tolerant financial pipelines at Visa to published research that opens the black box of AI — transformer fine-tuning, mechanistic interpretability, and ML systems at scale.",
   location: "Atlanta, GA",
   email: "nikhilgoudyeminedi@gmail.com",
   phone: "(404) 203-8442",
@@ -18,7 +18,6 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/nikhil-yeminedi-184576217/",
   github: "https://github.com/nikhilgoud003",
   scholar: "https://scholar.google.com/citations?user=nikhil-yeminedi",
-  resume: asset("NikhilYeminedi_Resume.pdf"),
   profileImage: asset("assets/profile.jpg"),
 };
 
@@ -61,9 +60,11 @@ export const stats = [
   { value: 99, suffix: "%", label: "BERT Classifier Accuracy" },
 ];
 
-export const about = `I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, working at the intersection of NLP, knowledge graphs, and large-scale legal data. My work spans fine-tuning transformer models for entity resolution, building mechanistic interpretability tools that look inside BERT's attention heads, and designing local, cost-free GraphRAG systems for natural-language querying over millions of federal court records.
+export const about = `I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, building and evaluating machine learning systems on large-scale real-world data — from transformer fine-tuning and mechanistic interpretability to production pipelines that process millions of records. I care about work that's honestly evaluated: I'd rather show a model's failure mode and how I fixed it than hide it.
 
-Before this, I spent 2.5+ years as a Data Engineer at Visa (via TCS), building ETL pipelines and credit-risk analytics at scale. I care about engineering work that's honestly evaluated — I'd rather show you a model's failure mode and how I fixed it than hide it.`;
+Along the way I've applied NLP, knowledge graphs, and RAG where they fit — entity resolution on federal court records, attention analysis inside BERT, and local GraphRAG over Neo4j — but the through-line is AI/ML engineering and research at scale.
+
+Before this, I spent 2.5+ years as a Data Engineer at Visa (via TCS), building ETL pipelines and credit-risk analytics on millions of daily transactions.`;
 
 export const education: Education[] = [
   {
@@ -215,11 +216,12 @@ export const experience: ExperienceItem[] = [
     company: "SCALES — Georgia State University",
     location: "Atlanta, GA",
     period: "May 2025 – Present",
-    image: asset("assets/education/gsu-campus.jpg"),
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80",
     summary: "Graduate Research Assistant — legal data & AI at national scale",
     context:
-      "I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, working at the intersection of NLP, knowledge graphs, and large-scale legal data. My work spans fine-tuning transformer models for entity resolution, building mechanistic interpretability tools that look inside BERT's attention heads, and designing local, cost-free GraphRAG systems for natural-language querying over millions of federal court records.",
-    tags: ["Graduate RA", "Legal AI", "Federal Court Data", "NLP", "Knowledge Graphs"],
+      "I'm an AI/ML Research Engineer at SCALES (Georgia State University) and a Graduate Research Assistant, building and evaluating ML systems on millions of federal court records — fine-tuning transformers for entity resolution, mechanistic interpretability inside BERT, and production RAG pipelines. NLP, knowledge graphs, and GraphRAG are tools I reach for when the problem calls for them.",
+    tags: ["Graduate RA", "AI/ML", "Federal Court Data", "NLP", "Knowledge Graphs"],
     bullets: [
       "Fine-tuned RoBERTa Entity Resolution (Ditto) on 1,000+ legal documents from 70+ source types — 100% F1, 99.9% record-linkage accuracy",
       "Built spaCy NER microservices processing 15M+ PACER records — 24% precision improvement, 98% entity-resolution accuracy",
@@ -606,7 +608,7 @@ export const publications: Publication[] = [
     venue: "Target: ACL / EMNLP / NAACL 2026",
     citation:
       "Yeminedi, N., Shrestha, A., Kubek, M.M., & Mikler, A.R. (2026). Towards Attention-Based Mechanistic Interpretability in Adverse Event Detection. DICE Lab, GSU.",
-    image: asset("assets/publications/interpretability.jpg"),
+    image: asset("assets/publications/transformer-architecture.jpg"),
   },
 ];
 

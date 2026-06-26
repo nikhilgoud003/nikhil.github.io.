@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { personal, stats } from "../data/portfolio";
 import { AnimatedCounter } from "./AnimatedCounter";
@@ -75,15 +75,6 @@ export function Hero() {
               className="px-6 py-3 rounded-full border border-border hover:border-accent/50 transition-colors"
             >
               View Projects
-            </motion.a>
-            <motion.a
-              href={personal.resume}
-              download
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-6 py-3 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors flex items-center gap-2"
-            >
-              <Download size={16} /> Resume
             </motion.a>
           </div>
 
